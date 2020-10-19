@@ -1,4 +1,4 @@
-/*
+    /*
 * To change this license header, choose License Headers in Project Properties.
 * To change this template file, choose Tools | Templates
 * and open the template in the editor.
@@ -52,6 +52,12 @@ public final class Strings {
     public static final String PSW_COLUMN_TRUST = "Trust";
     public static final String PSW_COLUMN_VALUE = "Value";
     public static final String PSW_COLUMN_SPECIALTY = "Specialty";
+    public static final String PSW_COLUMN_COUNTRY = "Country of Primary Qualification";
+    public static final String PSW_COLUMN_AGE = "Age";
+    public static final String PSW_COLUMN_ETHNICITY = "Ethnicity";
+    public static final String PSW_COLUMN_RELIGION = "Religion";
+    public static final String PSW_COLUMN_SEXUAL_OR = "Sexual Orientation";
+    public static final String PSW_COLUMN_DISABILITY = "Disability";
     public static final String PSW_ROW_F1COUNT = "Foundation Year 1";
     public static final String PSW_ROW_F2COUNT = "Foundation Year 2";
     public static final String PSW_ROW_DORSET = "Dorset County Hospital NHS Foundation Trust";
@@ -328,6 +334,7 @@ public final class Strings {
     public static final String TABLE_BY = "T2Y";
     
     public static final String LAST_YEAR_SLASH = "lastYearSlash";
+    
     
     
     

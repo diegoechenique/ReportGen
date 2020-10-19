@@ -190,244 +190,244 @@ public class PoiHelper {
         try (FileInputStream fileIn = new FileInputStream(psw)) {
             XSSFWorkbook workbook = new XSSFWorkbook(fileIn);
             XSSFSheet refSheet = workbook.getSheetAt(workbook.getSheetIndex(Strings.PSW_SHEET_REFERRALS));
-            int anxietyColumnNumber = getCellColumnByString(Strings.PSW_COLUMN_ANXIETY, refSheet);
-            int carreerColumnNumber = getCellColumnByString(Strings.PSW_COLUMN_CARREER, refSheet);
-            int clinicalSkillsColumnNumber = getCellColumnByString(Strings.PSW_COLUMN_CLINICAL_SKILLS, refSheet);
-            int communicationColumnNumber = getCellColumnByString(Strings.PSW_COLUMN_COMMUNICATION, refSheet);
-            int conductColumnNumber = getCellColumnByString(Strings.PSW_COLUMN_CONDUCT, refSheet);
-            int culturalColumnNumber = getCellColumnByString(Strings.PSW_COLUMN_CULTURAL, refSheet);
-            int examColumnNumber = getCellColumnByString(Strings.PSW_COLUMN_EXAM, refSheet);
-            int mentalHealthColumnNumber = getCellColumnByString(Strings.PSW_COLUMN_MENTAL, refSheet);
-            int physicalHealthColumnNumber = getCellColumnByString(Strings.PSW_COLUMN_PHYSICAL, refSheet);
-            int languageColumnNumber = getCellColumnByString(Strings.PSW_COLUMN_LANGUAGE, refSheet);
-            int profColumnNumber = getCellColumnByString(Strings.PSW_COLUMN_PROFFESSIONALISM, refSheet);
-            int adhdColumnNumber = getCellColumnByString(Strings.PSW_COLUMN_ADHD, refSheet);
-            int asdColumnNumber = getCellColumnByString(Strings.PSW_COLUMN_ASD, refSheet);
-            int dyslexiaColumnNumber = getCellColumnByString(Strings.PSW_COLUMN_DYSLEXIA, refSheet);
-            int dyspraxiaColumnNumber = getCellColumnByString(Strings.PSW_COLUMN_DYSPRAXIA, refSheet);
-            int srttColumnNumber = getCellColumnByString(Strings.PSW_COLUMN_SRTT, refSheet);
-            int teamColumnNumber = getCellColumnByString(Strings.PSW_COLUMN_TEAM, refSheet);
-            int timeColumnNumber = getCellColumnByString(Strings.PSW_COLUMN_TIME, refSheet);
-            int genderColumnNumber = getCellColumnByString(Strings.PSW_COLUMN_GENDER, refSheet);
+            int anxietyColNo = getCellColumnByString(Strings.PSW_COLUMN_ANXIETY, refSheet);
+            int carreerColNo = getCellColumnByString(Strings.PSW_COLUMN_CARREER, refSheet);
+            int clinicalSkillsColNo = getCellColumnByString(Strings.PSW_COLUMN_CLINICAL_SKILLS, refSheet);
+            int communicationColNo = getCellColumnByString(Strings.PSW_COLUMN_COMMUNICATION, refSheet);
+            int conductColNo = getCellColumnByString(Strings.PSW_COLUMN_CONDUCT, refSheet);
+            int culturalColNo = getCellColumnByString(Strings.PSW_COLUMN_CULTURAL, refSheet);
+            int examColNo = getCellColumnByString(Strings.PSW_COLUMN_EXAM, refSheet);
+            int mentalHealthColNo = getCellColumnByString(Strings.PSW_COLUMN_MENTAL, refSheet);
+            int physicalHealthColNo = getCellColumnByString(Strings.PSW_COLUMN_PHYSICAL, refSheet);
+            int languageColNo = getCellColumnByString(Strings.PSW_COLUMN_LANGUAGE, refSheet);
+            int profColNo = getCellColumnByString(Strings.PSW_COLUMN_PROFFESSIONALISM, refSheet);
+            int adhdColNo = getCellColumnByString(Strings.PSW_COLUMN_ADHD, refSheet);
+            int asdColNo = getCellColumnByString(Strings.PSW_COLUMN_ASD, refSheet);
+            int dyslexiaColNo = getCellColumnByString(Strings.PSW_COLUMN_DYSLEXIA, refSheet);
+            int dyspraxiaColNo = getCellColumnByString(Strings.PSW_COLUMN_DYSPRAXIA, refSheet);
+            int srttColNo = getCellColumnByString(Strings.PSW_COLUMN_SRTT, refSheet);
+            int teamColNo = getCellColumnByString(Strings.PSW_COLUMN_TEAM, refSheet);
+            int timeColNo = getCellColumnByString(Strings.PSW_COLUMN_TIME, refSheet);
+            int genderColNo = getCellColumnByString(Strings.PSW_COLUMN_GENDER, refSheet);
             
             Iterator<Row> rowIterator = refSheet.iterator();
             
             while (rowIterator.hasNext())
             {
                 Row row = rowIterator.next();
-                Cell anxietyCell = CellUtil.getCell(row, anxietyColumnNumber);
-                Cell carreerCell = CellUtil.getCell(row, carreerColumnNumber);
-                Cell clinicalSkillsCell = CellUtil.getCell(row, clinicalSkillsColumnNumber);
-                Cell communicationCell = CellUtil.getCell(row, communicationColumnNumber);
-                Cell conductCell = CellUtil.getCell(row, conductColumnNumber);
-                Cell culturalCell = CellUtil.getCell(row, culturalColumnNumber);
-                Cell examCell = CellUtil.getCell(row, examColumnNumber);
-                Cell mentalHealthCell = CellUtil.getCell(row, mentalHealthColumnNumber);
-                Cell physicalHealthCell = CellUtil.getCell(row, physicalHealthColumnNumber);
-                Cell languageCell = CellUtil.getCell(row, languageColumnNumber);
-                Cell profCell = CellUtil.getCell(row, profColumnNumber);
-                Cell adhdCell = CellUtil.getCell(row, adhdColumnNumber);
-                Cell asdCell = CellUtil.getCell(row, asdColumnNumber);
-                Cell dyslexiaCell = CellUtil.getCell(row, dyslexiaColumnNumber);
-                Cell dyspraxiaCell = CellUtil.getCell(row, dyspraxiaColumnNumber);
-                Cell srttCell = CellUtil.getCell(row, srttColumnNumber);
-                Cell teamCell = CellUtil.getCell(row, teamColumnNumber);
-                Cell timeCell = CellUtil.getCell(row, timeColumnNumber);
+                Cell anxietyCell = CellUtil.getCell(row, anxietyColNo);
+                Cell carreerCell = CellUtil.getCell(row, carreerColNo);
+                Cell clinicalSkillsCell = CellUtil.getCell(row, clinicalSkillsColNo);
+                Cell communicationCell = CellUtil.getCell(row, communicationColNo);
+                Cell conductCell = CellUtil.getCell(row, conductColNo);
+                Cell culturalCell = CellUtil.getCell(row, culturalColNo);
+                Cell examCell = CellUtil.getCell(row, examColNo);
+                Cell mentalHealthCell = CellUtil.getCell(row, mentalHealthColNo);
+                Cell physicalHealthCell = CellUtil.getCell(row, physicalHealthColNo);
+                Cell languageCell = CellUtil.getCell(row, languageColNo);
+                Cell profCell = CellUtil.getCell(row, profColNo);
+                Cell adhdCell = CellUtil.getCell(row, adhdColNo);
+                Cell asdCell = CellUtil.getCell(row, asdColNo);
+                Cell dyslexiaCell = CellUtil.getCell(row, dyslexiaColNo);
+                Cell dyspraxiaCell = CellUtil.getCell(row, dyspraxiaColNo);
+                Cell srttCell = CellUtil.getCell(row, srttColNo);
+                Cell teamCell = CellUtil.getCell(row, teamColNo);
+                Cell timeCell = CellUtil.getCell(row, timeColNo);
                 
                 if(!anxietyCell.getStringCellValue().equals("")){
                     
-                    if(row.getCell(genderColumnNumber).getStringCellValue().equals(Strings.PSW_GENDER_F)){
+                    if(row.getCell(genderColNo).getStringCellValue().equals(Strings.PSW_GENDER_F)){
                         otherFCount++;
                     }
                     
-                    else if(row.getCell(genderColumnNumber).getStringCellValue().equals(Strings.PSW_GENDER_M)){
+                    else if(row.getCell(genderColNo).getStringCellValue().equals(Strings.PSW_GENDER_M)){
                         otherMCount++;
                     }
                 }
                 
                 if(!carreerCell.getStringCellValue().equals("")){
                     
-                    if(row.getCell(genderColumnNumber).getStringCellValue().equals(Strings.PSW_GENDER_F)){
+                    if(row.getCell(genderColNo).getStringCellValue().equals(Strings.PSW_GENDER_F)){
                         carreerFCount++;
                     }
                     
-                    else if(row.getCell(genderColumnNumber).getStringCellValue().equals(Strings.PSW_GENDER_M)){
+                    else if(row.getCell(genderColNo).getStringCellValue().equals(Strings.PSW_GENDER_M)){
                         carreerMCount++;
                     }
                 }
                 
                 if(!clinicalSkillsCell.getStringCellValue().equals("")){
                     
-                    if(row.getCell(genderColumnNumber).getStringCellValue().equals(Strings.PSW_GENDER_F)){
+                    if(row.getCell(genderColNo).getStringCellValue().equals(Strings.PSW_GENDER_F)){
                         capabilityFCount++;
                     }
                     
-                    else if(row.getCell(genderColumnNumber).getStringCellValue().equals(Strings.PSW_GENDER_M)){
+                    else if(row.getCell(genderColNo).getStringCellValue().equals(Strings.PSW_GENDER_M)){
                         capabilityMCount++;
                     }
                 }
                 
                 if(!communicationCell.getStringCellValue().equals("")){
                     
-                    if(row.getCell(genderColumnNumber).getStringCellValue().equals(Strings.PSW_GENDER_F)){
+                    if(row.getCell(genderColNo).getStringCellValue().equals(Strings.PSW_GENDER_F)){
                         capabilityFCount++;
                     }
                     
-                    else if(row.getCell(genderColumnNumber).getStringCellValue().equals(Strings.PSW_GENDER_M)){
+                    else if(row.getCell(genderColNo).getStringCellValue().equals(Strings.PSW_GENDER_M)){
                         capabilityMCount++;
                     }
                 }
                 
                 if(!conductCell.getStringCellValue().equals("")){
                     
-                    if(row.getCell(genderColumnNumber).getStringCellValue().equals(Strings.PSW_GENDER_F)){
+                    if(row.getCell(genderColNo).getStringCellValue().equals(Strings.PSW_GENDER_F)){
                         conductFCount++;
                     }
                     
-                    else if(row.getCell(genderColumnNumber).getStringCellValue().equals(Strings.PSW_GENDER_M)){
+                    else if(row.getCell(genderColNo).getStringCellValue().equals(Strings.PSW_GENDER_M)){
                         conductMCount++;
                     }
                 }
                 
                 if(!culturalCell.getStringCellValue().equals("")){
                     
-                    if(row.getCell(genderColumnNumber).getStringCellValue().equals(Strings.PSW_GENDER_F)){
+                    if(row.getCell(genderColNo).getStringCellValue().equals(Strings.PSW_GENDER_F)){
                         capabilityFCount++;
                     }
                     
-                    else if(row.getCell(genderColumnNumber).getStringCellValue().equals(Strings.PSW_GENDER_M)){
+                    else if(row.getCell(genderColNo).getStringCellValue().equals(Strings.PSW_GENDER_M)){
                         capabilityMCount++;
                     }
                 }
                 
                 if(!examCell.getStringCellValue().equals("")){
                     
-                    if(row.getCell(genderColumnNumber).getStringCellValue().equals(Strings.PSW_GENDER_F)){
+                    if(row.getCell(genderColNo).getStringCellValue().equals(Strings.PSW_GENDER_F)){
                         examFCount++;
                     }
                     
-                    else if(row.getCell(genderColumnNumber).getStringCellValue().equals(Strings.PSW_GENDER_M)){
+                    else if(row.getCell(genderColNo).getStringCellValue().equals(Strings.PSW_GENDER_M)){
                         examMCount++;
                     }
                 }
                 
                 if(!mentalHealthCell.getStringCellValue().equals("")){
                     
-                    if(row.getCell(genderColumnNumber).getStringCellValue().equals(Strings.PSW_GENDER_F)){
+                    if(row.getCell(genderColNo).getStringCellValue().equals(Strings.PSW_GENDER_F)){
                         healthFCount++;
                     }
                     
-                    else if(row.getCell(genderColumnNumber).getStringCellValue().equals(Strings.PSW_GENDER_M)){
+                    else if(row.getCell(genderColNo).getStringCellValue().equals(Strings.PSW_GENDER_M)){
                         healthMCount++;
                     }
                 }
                 
                 if(!physicalHealthCell.getStringCellValue().equals("")){
                     
-                    if(row.getCell(genderColumnNumber).getStringCellValue().equals(Strings.PSW_GENDER_F)){
+                    if(row.getCell(genderColNo).getStringCellValue().equals(Strings.PSW_GENDER_F)){
                         healthFCount++;
                     }
                     
-                    else if(row.getCell(genderColumnNumber).getStringCellValue().equals(Strings.PSW_GENDER_M)){
+                    else if(row.getCell(genderColNo).getStringCellValue().equals(Strings.PSW_GENDER_M)){
                         healthMCount++;
                     }
                 }
                 
                 if(!languageCell.getStringCellValue().equals("")){
                     
-                    if(row.getCell(genderColumnNumber).getStringCellValue().equals(Strings.PSW_GENDER_F)){
+                    if(row.getCell(genderColNo).getStringCellValue().equals(Strings.PSW_GENDER_F)){
                         capabilityFCount++;
                     }
                     
-                    else if(row.getCell(genderColumnNumber).getStringCellValue().equals(Strings.PSW_GENDER_M)){
+                    else if(row.getCell(genderColNo).getStringCellValue().equals(Strings.PSW_GENDER_M)){
                         capabilityMCount++;
                     }
                 }
                 
                 if(!profCell.getStringCellValue().equals("")){
                     
-                    if(row.getCell(genderColumnNumber).getStringCellValue().equals(Strings.PSW_GENDER_F)){
+                    if(row.getCell(genderColNo).getStringCellValue().equals(Strings.PSW_GENDER_F)){
                         capabilityFCount++;
                     }
                     
-                    else if(row.getCell(genderColumnNumber).getStringCellValue().equals(Strings.PSW_GENDER_M)){
+                    else if(row.getCell(genderColNo).getStringCellValue().equals(Strings.PSW_GENDER_M)){
                         capabilityMCount++;
                     }
                 }
                 
                 if(!adhdCell.getStringCellValue().equals("")){
                     
-                    if(row.getCell(genderColumnNumber).getStringCellValue().equals(Strings.PSW_GENDER_F)){
+                    if(row.getCell(genderColNo).getStringCellValue().equals(Strings.PSW_GENDER_F)){
                         otherFCount++;
                     }
                     
-                    else if(row.getCell(genderColumnNumber).getStringCellValue().equals(Strings.PSW_GENDER_M)){
+                    else if(row.getCell(genderColNo).getStringCellValue().equals(Strings.PSW_GENDER_M)){
                         otherMCount++;
                     }
                 }
                 
                 if(!asdCell.getStringCellValue().equals("")){
                     
-                    if(row.getCell(genderColumnNumber).getStringCellValue().equals(Strings.PSW_GENDER_F)){
+                    if(row.getCell(genderColNo).getStringCellValue().equals(Strings.PSW_GENDER_F)){
                         otherFCount++;
                     }
                     
-                    else if(row.getCell(genderColumnNumber).getStringCellValue().equals(Strings.PSW_GENDER_M)){
+                    else if(row.getCell(genderColNo).getStringCellValue().equals(Strings.PSW_GENDER_M)){
                         otherMCount++;
                     }
                 }
                 
                 if(!dyslexiaCell.getStringCellValue().equals("")){
                     
-                    if(row.getCell(genderColumnNumber).getStringCellValue().equals(Strings.PSW_GENDER_F)){
+                    if(row.getCell(genderColNo).getStringCellValue().equals(Strings.PSW_GENDER_F)){
                         otherFCount++;
                     }
                     
-                    else if(row.getCell(genderColumnNumber).getStringCellValue().equals(Strings.PSW_GENDER_M)){
+                    else if(row.getCell(genderColNo).getStringCellValue().equals(Strings.PSW_GENDER_M)){
                         otherMCount++;
                     }
                 }
                 
                 if(!dyspraxiaCell.getStringCellValue().equals("")){
                     
-                    if(row.getCell(genderColumnNumber).getStringCellValue().equals(Strings.PSW_GENDER_F)){
+                    if(row.getCell(genderColNo).getStringCellValue().equals(Strings.PSW_GENDER_F)){
                         otherFCount++;
                     }
                     
-                    else if(row.getCell(genderColumnNumber).getStringCellValue().equals(Strings.PSW_GENDER_M)){
+                    else if(row.getCell(genderColNo).getStringCellValue().equals(Strings.PSW_GENDER_M)){
                         otherMCount++;
                     }
                 }
                 
                 if(!srttCell.getStringCellValue().equals("")){
                     
-                    if(row.getCell(genderColumnNumber).getStringCellValue().equals(Strings.PSW_GENDER_F)){
+                    if(row.getCell(genderColNo).getStringCellValue().equals(Strings.PSW_GENDER_F)){
                         otherFCount++;
                     }
                     
-                    else if(row.getCell(genderColumnNumber).getStringCellValue().equals(Strings.PSW_GENDER_M)){
+                    else if(row.getCell(genderColNo).getStringCellValue().equals(Strings.PSW_GENDER_M)){
                         otherMCount++;
                     }
                 }
                 
                 if(!teamCell.getStringCellValue().equals("")){
                     
-                    if(row.getCell(genderColumnNumber).getStringCellValue().equals(Strings.PSW_GENDER_F)){
+                    if(row.getCell(genderColNo).getStringCellValue().equals(Strings.PSW_GENDER_F)){
                         capabilityFCount++;
                     }
                     
-                    else if(row.getCell(genderColumnNumber).getStringCellValue().equals(Strings.PSW_GENDER_M)){
+                    else if(row.getCell(genderColNo).getStringCellValue().equals(Strings.PSW_GENDER_M)){
                         capabilityMCount++;
                     }
                 }
                 
                 if(!timeCell.getStringCellValue().equals("")){
                     
-                    if(row.getCell(genderColumnNumber).getStringCellValue().equals(Strings.PSW_GENDER_F)){
+                    if(row.getCell(genderColNo).getStringCellValue().equals(Strings.PSW_GENDER_F)){
                         capabilityFCount++;
                     }
                     
-                    else if(row.getCell(genderColumnNumber).getStringCellValue().equals(Strings.PSW_GENDER_M)){
+                    else if(row.getCell(genderColNo).getStringCellValue().equals(Strings.PSW_GENDER_M)){
                         capabilityMCount++;
                     }
                 }
@@ -520,9 +520,9 @@ public class PoiHelper {
         try (FileInputStream fileIn = new FileInputStream(psw)) {
             XSSFWorkbook workbook = new XSSFWorkbook(fileIn);
             XSSFSheet refSheet = workbook.getSheetAt(workbook.getSheetIndex(Strings.PSW_SHEET_REFERRALS));
-            int mentalHealthColumnNumber = getCellColumnByString(Strings.PSW_COLUMN_MENTAL, refSheet);
-            int physicalHealthColumnNumber = getCellColumnByString(Strings.PSW_COLUMN_PHYSICAL, refSheet);
-            int genderColumnNumber = getCellColumnByString(Strings.PSW_COLUMN_GENDER, refSheet);
+            int mentalHealthColNo = getCellColumnByString(Strings.PSW_COLUMN_MENTAL, refSheet);
+            int physicalHealthColNo = getCellColumnByString(Strings.PSW_COLUMN_PHYSICAL, refSheet);
+            int genderColNo = getCellColumnByString(Strings.PSW_COLUMN_GENDER, refSheet);
             
             Iterator<Row> rowIterator = refSheet.iterator();
             
@@ -530,25 +530,25 @@ public class PoiHelper {
             {
                 Row row = rowIterator.next();
                 
-                Cell mentalHealthCell = CellUtil.getCell(row, mentalHealthColumnNumber);
-                Cell physicalHealthCell = CellUtil.getCell(row, physicalHealthColumnNumber);
+                Cell mentalHealthCell = CellUtil.getCell(row, mentalHealthColNo);
+                Cell physicalHealthCell = CellUtil.getCell(row, physicalHealthColNo);
                 
-                if(!row.getCell(mentalHealthColumnNumber).getStringCellValue().equals("")&&row.getCell(genderColumnNumber).getStringCellValue().equals("F")&&row.getCell(physicalHealthColumnNumber).getStringCellValue().equals("")){
+                if(!row.getCell(mentalHealthColNo).getStringCellValue().equals("")&&row.getCell(genderColNo).getStringCellValue().equals("F")&&row.getCell(physicalHealthColNo).getStringCellValue().equals("")){
                     mentalFcount++;
                 }
-                if(!row.getCell(physicalHealthColumnNumber).getStringCellValue().equals("")&&row.getCell(genderColumnNumber).getStringCellValue().equals("F")&&row.getCell(mentalHealthColumnNumber).getStringCellValue().equals("")){
+                if(!row.getCell(physicalHealthColNo).getStringCellValue().equals("")&&row.getCell(genderColNo).getStringCellValue().equals("F")&&row.getCell(mentalHealthColNo).getStringCellValue().equals("")){
                     physicalFcount++;
                 }
-                if(!row.getCell(mentalHealthColumnNumber).getStringCellValue().equals("")&&row.getCell(genderColumnNumber).getStringCellValue().equals("F")&&!row.getCell(physicalHealthColumnNumber).getStringCellValue().equals("")){
+                if(!row.getCell(mentalHealthColNo).getStringCellValue().equals("")&&row.getCell(genderColNo).getStringCellValue().equals("F")&&!row.getCell(physicalHealthColNo).getStringCellValue().equals("")){
                     bothFcount++;
                 }
-                if(!row.getCell(mentalHealthColumnNumber).getStringCellValue().equals("")&&row.getCell(genderColumnNumber).getStringCellValue().equals("M")&&!row.getCell(physicalHealthColumnNumber).getStringCellValue().equals("")){
+                if(!row.getCell(mentalHealthColNo).getStringCellValue().equals("")&&row.getCell(genderColNo).getStringCellValue().equals("M")&&!row.getCell(physicalHealthColNo).getStringCellValue().equals("")){
                     bothMcount++;
                 }
-                if(!row.getCell(physicalHealthColumnNumber).getStringCellValue().equals("")&&row.getCell(genderColumnNumber).getStringCellValue().equals("M")&&row.getCell(mentalHealthColumnNumber).getStringCellValue().equals("")){
+                if(!row.getCell(physicalHealthColNo).getStringCellValue().equals("")&&row.getCell(genderColNo).getStringCellValue().equals("M")&&row.getCell(mentalHealthColNo).getStringCellValue().equals("")){
                     physicalFcount++;
                 }
-                if(!row.getCell(mentalHealthColumnNumber).getStringCellValue().equals("")&&row.getCell(genderColumnNumber).getStringCellValue().equals("M")&&row.getCell(physicalHealthColumnNumber).getStringCellValue().equals("")){
+                if(!row.getCell(mentalHealthColNo).getStringCellValue().equals("")&&row.getCell(genderColNo).getStringCellValue().equals("M")&&row.getCell(physicalHealthColNo).getStringCellValue().equals("")){
                     mentalMcount++;
                 }
             }
@@ -617,7 +617,7 @@ public class PoiHelper {
         try (FileInputStream fileIn = new FileInputStream(psw)) {
             XSSFWorkbook workbook = new XSSFWorkbook(fileIn);
             XSSFSheet refSheet = workbook.getSheetAt(workbook.getSheetIndex(Strings.PSW_SHEET_REFERRALS));
-            int gradeColumnNumber = getCellColumnByString(Strings.PSW_COLUMN_GRADE, refSheet);
+            int gradeColNo = getCellColumnByString(Strings.PSW_COLUMN_GRADE, refSheet);
             
             Iterator<Row> rowIterator = refSheet.iterator();
             
@@ -625,7 +625,7 @@ public class PoiHelper {
             {
                 Row row = rowIterator.next();
                 
-                Cell gradeCell = CellUtil.getCell(row, gradeColumnNumber);
+                Cell gradeCell = CellUtil.getCell(row, gradeColNo);
                 
                 Set<String> f1grades = new HashSet<>();
                 f1grades.add("F1");
@@ -731,7 +731,7 @@ public class PoiHelper {
         try (FileInputStream fileIn = new FileInputStream(psw)) {
             XSSFWorkbook workbook = new XSSFWorkbook(fileIn);
             XSSFSheet refSheet = workbook.getSheetAt(workbook.getSheetIndex(Strings.PSW_SHEET_REFERRALS));
-            int gradeColumnNumber = getCellColumnByString(Strings.PSW_COLUMN_GRADE, refSheet);
+            int gradeColNo = getCellColumnByString(Strings.PSW_COLUMN_GRADE, refSheet);
             
             Iterator<Row> rowIterator = refSheet.iterator();
             
@@ -739,7 +739,7 @@ public class PoiHelper {
             {
                 Row row = rowIterator.next();
                 
-                Cell cell = CellUtil.getCell(row, gradeColumnNumber);
+                Cell cell = CellUtil.getCell(row, gradeColNo);
                 
                 if(cell.getStringCellValue().equals(Strings.PSW_GRADE_FY1)||cell.getStringCellValue().equals(Strings.PSW_GRADE_FY2)){
                     ftCount++;
@@ -2030,6 +2030,175 @@ public class PoiHelper {
         return list;
     }
     
+    public List<String> getTable5Line(String trst, String lastLn){
+        
+        List<String> list = new ArrayList<>();
+        
+        String trust = trst;
+        String gender = "";
+        String grade = "";
+        String school = "";
+        String addRef = "";
+        String country = "";
+        String age = "";
+        String ethicity = "";
+        String sexOr = "";
+        String religion = "";
+        String disability = "";
+        String lastLine = lastLn;
+        
+        try{
+            FileInputStream pswFileIn = new FileInputStream(psw);
+            XSSFWorkbook pswWorkbook = new XSSFWorkbook(pswFileIn);
+            XSSFSheet refSheet = pswWorkbook.getSheetAt(pswWorkbook.getSheetIndex(Strings.PSW_SHEET_REFERRALS));
+            int exSupportColNo = getCellColumnByString(Strings.PSW_COLUMN_EXAM, refSheet);
+            int anxietyColNo = getCellColumnByString(Strings.PSW_COLUMN_ANXIETY, refSheet);
+            int carreerColNo = getCellColumnByString(Strings.PSW_COLUMN_CARREER, refSheet);
+            int clinicalSkillsColNo = getCellColumnByString(Strings.PSW_COLUMN_CLINICAL_SKILLS, refSheet);
+            int communicationColNo = getCellColumnByString(Strings.PSW_COLUMN_COMMUNICATION, refSheet);
+            int conductColNo = getCellColumnByString(Strings.PSW_COLUMN_CONDUCT, refSheet);
+            int culturalColNo = getCellColumnByString(Strings.PSW_COLUMN_CULTURAL, refSheet);
+            int mentalHealthColNo = getCellColumnByString(Strings.PSW_COLUMN_MENTAL, refSheet);
+            int physicalHealthColNo = getCellColumnByString(Strings.PSW_COLUMN_PHYSICAL, refSheet);
+            int languageColNo = getCellColumnByString(Strings.PSW_COLUMN_LANGUAGE, refSheet);
+            int profColNo = getCellColumnByString(Strings.PSW_COLUMN_PROFFESSIONALISM, refSheet);
+            int adhdColNo = getCellColumnByString(Strings.PSW_COLUMN_ADHD, refSheet);
+            int asdColNo = getCellColumnByString(Strings.PSW_COLUMN_ASD, refSheet);
+            int dyslexiaColNo = getCellColumnByString(Strings.PSW_COLUMN_DYSLEXIA, refSheet);
+            int dyspraxiaColNo = getCellColumnByString(Strings.PSW_COLUMN_DYSPRAXIA, refSheet);
+            int srttColNo = getCellColumnByString(Strings.PSW_COLUMN_SRTT, refSheet);
+            int teamColNo = getCellColumnByString(Strings.PSW_COLUMN_TEAM, refSheet);
+            int timeColNo = getCellColumnByString(Strings.PSW_COLUMN_TIME, refSheet);
+            int genderColNo = getCellColumnByString(Strings.PSW_COLUMN_GENDER, refSheet);
+            int trustColNo = getCellColumnByString(Strings.PSW_COLUMN_TRUST, refSheet);
+            int gradeColNo = getCellColumnByString(Strings.PSW_COLUMN_GRADE, refSheet);
+            int schoolColNo = getCellColumnByString(Strings.PSW_COLUMN_SPECIALTY, refSheet);
+            int countryColNo = getCellColumnByString(Strings.PSW_COLUMN_COUNTRY, refSheet);
+            int ageColNo = getCellColumnByString(Strings.PSW_COLUMN_AGE, refSheet);
+            int religionColNo = getCellColumnByString(Strings.PSW_COLUMN_RELIGION, refSheet);
+            int ethColNo = getCellColumnByString(Strings.PSW_COLUMN_ETHNICITY, refSheet);
+            int sexOrColNo = getCellColumnByString(Strings.PSW_COLUMN_SEXUAL_OR, refSheet);
+            int disabilityColNo = getCellColumnByString(Strings.PSW_COLUMN_DISABILITY, refSheet);
+            
+            Iterator<Row> rowIteratorRefSheet = refSheet.iterator();
+            while(rowIteratorRefSheet.hasNext()){
+                Row r = rowIteratorRefSheet.next();
+                if(!isRowEmpty(r)){
+                    if(r.getRowNum()>3&&r.getRowNum()>Integer.parseInt(lastLn)&&r.getCell(trustColNo).getStringCellValue().contains(trust)&&!isCellEmpty(r.getCell(exSupportColNo))){
+                        
+                        lastLine = String.valueOf(r.getRowNum());
+                        if(!isCellEmpty(r.getCell(genderColNo))){
+                            gender = r.getCell(genderColNo).getStringCellValue();
+                        }
+                        
+                        if(!isCellEmpty(r.getCell(gradeColNo))){
+                            grade = r.getCell(gradeColNo).getStringCellValue();
+                        }
+                        
+                        if(!isCellEmpty(r.getCell(schoolColNo))){
+                            school = r.getCell(schoolColNo).getStringCellValue();
+                        }
+                        
+                        if(!isCellEmpty(r.getCell(countryColNo))){
+                            country = r.getCell(countryColNo).getStringCellValue();
+                        }
+                        
+                        if(!isCellEmpty(r.getCell(ageColNo))){
+                            age = String.valueOf(Math.round(r.getCell(ageColNo).getNumericCellValue()));
+                        }
+                        
+                        if(!isCellEmpty(r.getCell(religionColNo))){
+                            religion = r.getCell(religionColNo).getStringCellValue();
+                        }
+                        
+                        if(!isCellEmpty(r.getCell(sexOrColNo))){
+                            sexOr = r.getCell(sexOrColNo).getStringCellValue();
+                        }
+                        
+                        if(!isCellEmpty(r.getCell(disabilityColNo))){
+                            disability = r.getCell(disabilityColNo).getStringCellValue();
+                        }
+                        
+                        if(!isCellEmpty(r.getCell(ethColNo))){
+                            ethicity = r.getCell(ethColNo).getStringCellValue();
+                        }
+                        
+                        if(!isCellEmpty(r.getCell(anxietyColNo))){
+                            addRef = Strings.PSW_COLUMN_ANXIETY;
+                        }
+                        if(!isCellEmpty(r.getCell(carreerColNo))){
+                            addRef = addRef+"; "+Strings.PSW_COLUMN_CARREER;
+                        }
+                        if(!isCellEmpty(r.getCell(clinicalSkillsColNo))){
+                            addRef = addRef+"; "+Strings.PSW_COLUMN_CLINICAL_SKILLS;
+                        }
+                        if(!isCellEmpty(r.getCell(communicationColNo))){
+                            addRef = addRef+"; "+Strings.PSW_COLUMN_COMMUNICATION;
+                        }
+                        if(!isCellEmpty(r.getCell(conductColNo))){
+                            addRef = addRef+"; "+Strings.PSW_COLUMN_CONDUCT;
+                        }
+                        if(!isCellEmpty(r.getCell(culturalColNo))){
+                            addRef = addRef+"; "+Strings.PSW_COLUMN_CULTURAL;
+                        }
+                        if(!isCellEmpty(r.getCell(mentalHealthColNo))){
+                            addRef = addRef+"; "+Strings.PSW_COLUMN_MENTAL;
+                        }
+                        if(!isCellEmpty(r.getCell(physicalHealthColNo))){
+                            addRef = addRef+"; "+Strings.PSW_COLUMN_PHYSICAL;
+                        }
+                        if(!isCellEmpty(r.getCell(languageColNo))){
+                            addRef = addRef+"; "+Strings.PSW_COLUMN_LANGUAGE;
+                        }
+                        if(!isCellEmpty(r.getCell(profColNo))){
+                            addRef = addRef+"; "+Strings.PSW_COLUMN_PROFFESSIONALISM;
+                        }
+                        if(!isCellEmpty(r.getCell(adhdColNo))){
+                            addRef = addRef+"; "+Strings.PSW_COLUMN_ADHD;
+                        }
+                        if(!isCellEmpty(r.getCell(asdColNo))){
+                            addRef = addRef+"; "+Strings.PSW_COLUMN_ASD;
+                        }
+                        if(!isCellEmpty(r.getCell(dyslexiaColNo))){
+                            addRef = addRef+"; "+Strings.PSW_COLUMN_DYSLEXIA;
+                        }
+                        if(!isCellEmpty(r.getCell(dyspraxiaColNo))){
+                            addRef = addRef+"; "+Strings.PSW_COLUMN_DYSPRAXIA;
+                        }
+                        if(!isCellEmpty(r.getCell(srttColNo))){
+                            addRef = addRef+"; "+Strings.PSW_COLUMN_SRTT;
+                        }
+                        if(!isCellEmpty(r.getCell(teamColNo))){
+                            addRef = addRef+"; "+Strings.PSW_COLUMN_TEAM;
+                        }
+                        if(!isCellEmpty(r.getCell(timeColNo))){
+                            addRef = addRef+"; "+Strings.PSW_COLUMN_TIME;
+                        }
+                    }
+                    if(!gender.equals("")){
+                        break;
+                    }
+                }
+            }
+            
+            list.add(gender);
+            list.add(grade);
+            list.add(school);
+            list.add(addRef);
+            list.add(country);
+            list.add(age);
+            list.add(ethicity);
+            list.add(sexOr);
+            list.add(religion);
+            list.add(disability);
+            list.add(lastLine);
+            
+        }catch (IOException ex) {
+            Logger.getLogger(PoiHelper.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return list;
+    }
+    
     public  void countOpenedAndClosed(){
         
         int closedWithinYr = 0;
@@ -2073,7 +2242,7 @@ public class PoiHelper {
                     int dateOpenedMonth = dateOpenedCal.get(Calendar.MONTH);
                     int dateClosedYear = dateClosedCal.get(Calendar.YEAR);
                     int dateClosedMonth = dateClosedCal.get(Calendar.MONTH);
-
+                    
                     
                     if(dateOpenedYear==DocHelper.getYear()&&dateClosedMonth<=03){
                         openedAndClosedWithinYr++;
@@ -2096,7 +2265,7 @@ public class PoiHelper {
                     }
                 }
             }
-
+            
             
         } catch (IOException ex) {
             Logger.getLogger(PoiHelper.class.getName()).log(Level.SEVERE, null, ex);

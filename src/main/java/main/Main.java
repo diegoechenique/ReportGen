@@ -34,10 +34,10 @@ public class Main {
     
     public static void main(String[] args) {
         
-        MainJFrame frame = new MainJFrame();
-        frame.setVisible(true);
-        frame.setLocationRelativeTo(null);
-        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+//        MainJFrame frame = new MainJFrame();
+//        frame.setVisible(true);
+//        frame.setLocationRelativeTo(null);
+//        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
 //
 //            int year = DocHelper.getYear();
 //            int nextYear = year+1;
@@ -63,7 +63,11 @@ public class Main {
 //            PoiHelper.getGraph10();
 //            PoiHelper.getGraph11();
 //            GcExcelHelper.genGraphs();
-//            DocHelper.getTables();
+            File outFile = new File("src/main/outputs/Output.docx");
+            File psw = new File("src/main/resources/PSW.xlsx");
+            File graphs = new File ("src/main/resources/Graphs.xlsx");
+            DocHelper helper = new DocHelper(outFile, psw, graphs);
+            helper.getTables();
 
             
             

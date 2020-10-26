@@ -11,17 +11,12 @@ import facade.PoiHelper;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
-import java.util.HashMap;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.imageio.ImageIO;
 import javax.swing.ImageIcon;
 import javax.swing.JFileChooser;
 import javax.swing.JFrame;
-import javax.swing.JOptionPane;
-import javax.swing.UIManager;
-import javax.swing.UnsupportedLookAndFeelException;
-
 /**
  *
  * @author diego
@@ -32,7 +27,6 @@ public class MainJFrame extends javax.swing.JFrame {
     private ImageIcon logoIcon;
     private InputStream folderIn;
     private ImageIcon folderIcon;
-    private PoiHelper poiHelper;
     private File pswFile;
     private String docPath;
     private String graphPath;
@@ -54,13 +48,7 @@ public class MainJFrame extends javax.swing.JFrame {
                         break;
                     }
                 }
-            } catch (ClassNotFoundException ex) {
-                java.util.logging.Logger.getLogger(MainJFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-            } catch (InstantiationException ex) {
-                java.util.logging.Logger.getLogger(MainJFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-            } catch (IllegalAccessException ex) {
-                java.util.logging.Logger.getLogger(MainJFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-            } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+            } catch (ClassNotFoundException | InstantiationException | IllegalAccessException | javax.swing.UnsupportedLookAndFeelException ex) {
                 java.util.logging.Logger.getLogger(MainJFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
             }
         } catch (IOException ex) {
@@ -91,6 +79,7 @@ public class MainJFrame extends javax.swing.JFrame {
         jButton4 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setTitle("NHS Report Gen. - Demo");
         setResizable(false);
 
         jLabel1.setIcon(logoIcon);
@@ -216,34 +205,17 @@ public class MainJFrame extends javax.swing.JFrame {
     }//GEN-LAST:event_jButton2MouseClicked
 
     private void jButton3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton3MouseClicked
-        PoiHelper ph = new PoiHelper(pswFile,graphs);
-        GcExcelHelper gc = new GcExcelHelper(graphs);
-        ph.saveGraphs();
-        ph.getGraph1();
-        ph.getGraph2();
-        ph.getGraph3();
-        ph.getGraph4();
-        ph.getGraph5();
-        ph.getGraph6();
-        ph.getGraph7();
-        ph.getGraph8();
-        ph.getGraph9();
-        ph.getGraph10();
-        ph.getGraph11();
-        gc.genGraphs();
-        
-        DocHelper helper = new DocHelper(doc, pswFile, graphs);
-        
-        int year = DocHelper.getYear();
-        int nextYear = year+1;
-        HashMap m = DocHelper.genMap("currentYearSlash", year+"/"+nextYear);
-        DocHelper.findAndReplace(m, doc);
-        
-        helper.saveDoc();
-        helper.getTables();
-        
-        JOptionPane.showMessageDialog(this, "Output saved", "Question",
-        JOptionPane.INFORMATION_MESSAGE);
+                                   
+
+            this.setEnabled(false);
+            PoiHelper ph = new PoiHelper(pswFile,graphs);
+            GcExcelHelper gc = new GcExcelHelper(graphs);
+            DocHelper helper = new DocHelper(doc, pswFile, graphs);
+            LoadingJFrame ljf = new LoadingJFrame();
+            ljf.setVisible(true);
+            ljf.setLocationRelativeTo(null);
+            ljf.run(ph, gc, helper);
+            this.setEnabled(true);
     }//GEN-LAST:event_jButton3MouseClicked
     
     /**
@@ -262,22 +234,16 @@ public class MainJFrame extends javax.swing.JFrame {
                     break;
                 }
             }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(MainJFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(MainJFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(MainJFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+        } catch (ClassNotFoundException | InstantiationException | IllegalAccessException | javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(MainJFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
         //</editor-fold>
         
+        //</editor-fold>
+        
         /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new MainJFrame().setVisible(true);
-            }
+        java.awt.EventQueue.invokeLater(() -> {
+            new MainJFrame().setVisible(true);
         });
     }
     

@@ -14,7 +14,7 @@ public final class Strings {
     //paths
     public static final String PSW_PATH = "src/main/resources/PSW.xlsx";
     public static final String GRAPH_OUT_PATH = "src/main/resources/Graphs.xlsx";
-    public static final String DOC_PATH = "GQReportSample.docx";
+    public static final String DOC_PATH = "QGReportSample.docx";
     public static final String DOC_OUT_PATH = "src/main/outputs/Output.docx";
     
     
@@ -192,6 +192,8 @@ public final class Strings {
     public static final String PSW_SHEET_TRUST = "Trust";
     public static final String PSW_SHEET_WESSEX = "Wessex";
     public static final String PSW_SHEET_SPECIALTY = "Specialty";
+    public static final String PSW_SHEET_CM = "CM";
+    public static final String PSW_SHEET_SSG = "SSG";
     public static final String GRAPH_SHEET_1 = "graph1";
     public static final String GRAPH_SHEET_2 = "graph2";
     public static final String GRAPH_SHEET_3 = "graph3";

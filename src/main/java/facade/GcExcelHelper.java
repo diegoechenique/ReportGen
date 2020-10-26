@@ -26,6 +26,9 @@ public class GcExcelHelper {
     public GcExcelHelper(File graphs){
         this.graphs=graphs;
     }
+
+    public GcExcelHelper() {
+    }
     
     public void genGraphs(){
         

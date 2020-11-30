@@ -8,6 +8,8 @@ package gui;
 import facade.DocHelper;
 import facade.GcExcelHelper;
 import facade.PoiHelper;
+import java.io.File;
+import java.util.ArrayList;
 import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -47,11 +49,16 @@ public class LoadingJFrame extends javax.swing.JFrame {
         }
     }
     
-    public void run(PoiHelper poiHelper, GcExcelHelper gcExcelHelper, DocHelper docHelper){
+    public void run(MainJFrame main){
         
-        this.poiHelper = poiHelper;
-        this.gcExcelHelper = gcExcelHelper;
-        this.docHelper = docHelper;
+        ArrayList<File> fileList = main.getFileList();
+        
+        File docFile = fileList.get(0);
+        File graphsFile = fileList.get(1);
+        File pswFile =  fileList.get(2);
+        poiHelper = new PoiHelper(pswFile,graphsFile);
+        docHelper = new DocHelper(poiHelper, docFile);
+        gcExcelHelper = new GcExcelHelper(graphsFile);
         genReport();
         
     }
@@ -148,33 +155,36 @@ public class LoadingJFrame extends javax.swing.JFrame {
                 
                 try{
                 Thread.sleep(100);
+                publish("Reading database...");
+                poiHelper.getRefRecords();
                 publish("Generating Graphs.xlsx output");
-                
-                publish("Generating sheet for graph 1");
                 poiHelper.genGraphFile();
-                poiHelper.getGraph1();
+                publish("Generating sheet for graph 1");
+                poiHelper.getGraph0();
                 publish("Generating sheet for graph 2");
-                poiHelper.getGraph2();
+                poiHelper.getGraph1();
                 publish("Generating sheet for graph 3");
-                poiHelper.getGraph3();
+                poiHelper.getGraph2();
                 publish("Generating sheet for graph 4");
-                poiHelper.getGraph4();
+                poiHelper.getGraph3();
                 publish("Generating sheet for graph 5");
-                poiHelper.getGraph5();
+                poiHelper.getGraph4();
                 publish("Generating sheet for graph 6");
-                poiHelper.getGraph6();
+                poiHelper.getGraph5();
                 publish("Generating sheet for graph 7");
-                poiHelper.getGraph7();
+                poiHelper.getGraph6();
                 publish("Generating sheet for graph 8");
-                poiHelper.getGraph8();
+                poiHelper.getGraph7();
                 publish("Generating sheet for graph 9");
-                poiHelper.getGraph9();
+                poiHelper.getGraph8();
                 publish("Generating sheet for graph 10");
-                poiHelper.getGraph10();
+                poiHelper.getGraph9();
                 publish("Generating sheet for graph 11");
+                poiHelper.getGraph10();
+                publish("Generating sheet for graph 12");
                 poiHelper.getGraph11();
                 publish("Creating charts");
-                gcExcelHelper.genGraphs();
+                gcExcelHelper.genGraphs();               
                 publish("OverWriting Graphs.xlsx");
                 publish("Generating Output.docx output");
                 docHelper.genDocFile();
@@ -190,8 +200,14 @@ public class LoadingJFrame extends javax.swing.JFrame {
                 docHelper.getTable4();
                 publish("Generating table 6");
                 docHelper.getTable5();
-                publish("Generating table 7, this might take a while...");
-                docHelper.getTable6();
+                publish("Generating table 8");
+                docHelper.getTable7();
+                publish("Generating table 9");
+                docHelper.getTable8();
+                publish("Generating table 10");
+                docHelper.getTable9();
+                publish("Updating text...");
+                docHelper.doTextUpdate();
                 publish("OverWriting Output.docx");
                 docHelper.saveDoc();
                 publish("Program finished - Result OK");

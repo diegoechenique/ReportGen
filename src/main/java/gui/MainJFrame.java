@@ -11,6 +11,7 @@ import facade.PoiHelper;
 import java.io.File;
 import java.io.IOException;
 import java.io.InputStream;
+import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.imageio.ImageIO;
@@ -32,6 +33,9 @@ public class MainJFrame extends javax.swing.JFrame {
     private String graphPath;
     private File doc;
     private File graphs;
+    private PoiHelper poiHelper;
+    private DocHelper docHelper;
+    private GcExcelHelper gcHelper;
     /**
      * Creates new form MainJFrame
      */
@@ -118,7 +122,12 @@ public class MainJFrame extends javax.swing.JFrame {
             }
         });
 
-        jButton4.setText("Cancel");
+        jButton4.setText("Exit");
+        jButton4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton4MouseClicked(evt);
+            }
+        });
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -208,43 +217,24 @@ public class MainJFrame extends javax.swing.JFrame {
                                    
 
             this.setEnabled(false);
-            PoiHelper ph = new PoiHelper(pswFile,graphs);
-            GcExcelHelper gc = new GcExcelHelper(graphs);
-            DocHelper helper = new DocHelper(doc, pswFile, graphs);
             LoadingJFrame ljf = new LoadingJFrame();
             ljf.setVisible(true);
             ljf.setLocationRelativeTo(null);
-            ljf.run(ph, gc, helper);
+            ljf.run(this);
             this.setEnabled(true);
     }//GEN-LAST:event_jButton3MouseClicked
+
+    private void jButton4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton4MouseClicked
+        System.exit(0);
+    }//GEN-LAST:event_jButton4MouseClicked
     
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-        * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html
-        */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException | InstantiationException | IllegalAccessException | javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(MainJFrame.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
+    public ArrayList<File> getFileList(){
+        ArrayList<File> list = new ArrayList<>();
+        list.add(doc);
+        list.add(graphs);
+        list.add(pswFile);
         
-        //</editor-fold>
-        
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(() -> {
-            new MainJFrame().setVisible(true);
-        });
+        return list;
     }
     
     // Variables declaration - do not modify//GEN-BEGIN:variables

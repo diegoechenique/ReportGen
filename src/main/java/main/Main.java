@@ -15,6 +15,7 @@ import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.HashMap;
 import java.util.logging.Level;
@@ -26,6 +27,7 @@ import org.apache.poi.xwpf.usermodel.XWPFDocument;
 import org.apache.poi.xwpf.usermodel.XWPFTable;
 import org.apache.poi.xwpf.usermodel.XWPFTableRow;
 import res.Strings;
+import vo.RefRecord;
 
 /**
  *
@@ -35,54 +37,31 @@ public class Main {
     
     public static void main(String[] args) {
         
-        SwingUtilities.invokeLater(new Runnable(){
-            @Override
-            public void run() {
-                MainJFrame frame = new MainJFrame();
-                frame.setVisible(true);
-                frame.setLocationRelativeTo(null);
-                frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);            }
-            
-        });
-        
-//
-//            int year = DocHelper.getYear();
-//            int nextYear = year+1;
-////            
-//
-////            
-////            
-////            
-//////            PoiHelper.countOpenedAndClosed(in);
-////            
-//            HashMap m = DocHelper.genMap("currentYearSlash", year+"/"+nextYear);
-//            DocHelper.findAndReplace(m, docOut);
-////            DocHelper.getTable0();
-//            PoiHelper.getGraph1();
-//            PoiHelper.getGraph2();
-//            PoiHelper.getGraph3();
-//            PoiHelper.getGraph4();
-//            PoiHelper.getGraph5();
-//            PoiHelper.getGraph6();
-//            PoiHelper.getGraph7();
-//            PoiHelper.getGraph8();
-//            PoiHelper.getGraph9();
-//            PoiHelper.getGraph10();
-//            PoiHelper.getGraph11();
-//            GcExcelHelper.genGraphs();
-//            File outFile = new File("src/main/outputs/Output.docx");
-//            File psw = new File("src/main/resources/PSW.xlsx");
-//            File graphs = new File ("src/main/resources/Graphs.xlsx");
-//            DocHelper helper = new DocHelper(outFile, psw, graphs);
-//            helper.getTables();
+//        SwingUtilities.invokeLater(new Runnable(){
+//            @Override
+//            public void run() {
+//                MainJFrame frame = new MainJFrame();
+//                frame.setVisible(true);
+//                frame.setLocationRelativeTo(null);
+//                frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);            }
+//            
+//        });
 
-            
-            
-            
-//        DocHelper dh = new DocHelper();
-//        DocHelper.genOutput(doc, docOut);
-//        dh.getTable0(docOut);
-       
-    }
+    File psw = new File(Strings.PSW_PATH);
+    File doc = new File (Strings.DOC_OUT_PATH);
+    File graphs = new File(Strings.GRAPH_OUT_PATH);
     
+    PoiHelper poiHelper = new PoiHelper(psw, graphs);
+    DocHelper docHelper = new DocHelper(poiHelper, doc);
+    GcExcelHelper gchelper = new GcExcelHelper(graphs);
+  
+    docHelper.doTextUpdate();
+//    poiHelper.getRefRecords();
+//    poiHelper.getGraph7();
+//    docHelper.getTable0();
+    docHelper.saveDoc();
+////    
+    
+
+    }
 }

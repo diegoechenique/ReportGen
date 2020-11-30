@@ -12,10 +12,10 @@ package res;
 public final class Strings {
     
     //paths
-    public static final String PSW_PATH = "src/main/resources/PSW.xlsx";
-    public static final String GRAPH_OUT_PATH = "src/main/resources/Graphs.xlsx";
+    public static final String PSW_PATH = "C:/Users/diego/Desktop/PSW.xlsx";
+    public static final String GRAPH_OUT_PATH = "C:/Users/diego/Desktop/Graphs.xlsx";
     public static final String DOC_PATH = "QGReportSample.docx";
-    public static final String DOC_OUT_PATH = "src/main/outputs/Output.docx";
+    public static final String DOC_OUT_PATH = "C:/Users/diego/Desktop/Output.docx";
     
     
     //Referrals tab columns
@@ -58,6 +58,10 @@ public final class Strings {
     public static final String PSW_COLUMN_RELIGION = "Religion";
     public static final String PSW_COLUMN_SEXUAL_OR = "Sexual Orientation";
     public static final String PSW_COLUMN_DISABILITY = "Disability";
+    public static final String PSW_COLUMN_DATE = "Referral Date";
+    public static final String PSW_COLUMN_DATE_OPENED = "Date opened";
+    public static final String PSW_COLUMN_DATE_CLOSED = "Date Closed";
+    public static final String PSW_COLUMN_CASE_OPEN = "Case open";
     public static final String PSW_ROW_F1COUNT = "Foundation Year 1";
     public static final String PSW_ROW_F2COUNT = "Foundation Year 2";
     public static final String PSW_ROW_DORSET = "Dorset County Hospital NHS Foundation Trust";
@@ -150,8 +154,18 @@ public final class Strings {
     public static final String PSW_GRADE_PHARMACY = "Pharmacy";
     public static final String PSW_SPECIALTY_ANAESTHETICS ="Anaesthetics";
     public static final String PSW_SPECIALTY_DENTAL ="Dental";
+    public static final String PSW_SPECIALTY_DERMATOLOGY ="Dermatology";
+    public static final String PSW_SPECIALTY_ENDOCRINOLOGY = "Endocrinology & Diabetes";
+    public static final String PSW_SPECIALTY_GASTRO = "Gastroenterology";
     public static final String PSW_SPECIALTY_EMERGENCY ="Emergency";
+    public static final String PSW_SPECIALTY_MEDICINE_TITLE ="Medicine";
     public static final String PSW_SPECIALTY_FOUNDATION ="Foundation";
+    public static final String PSW_SPECIALTY_HAEMATOLOGY ="Haematology";
+    public static final String PSW_SPECIALTY_HISTOPATHOLOGY = "Histopathology";
+    public static final String PSW_SPECIALTY_NEUROLOGY = "Neurology";
+    public static final String PSW_SPECIALTY_ONCOLOGY = "Oncology";
+    public static final String PSW_SPECIALTY_OPHTHALMOLOGY = "Ophtalmology";
+    public static final String PSW_SPECIALTY_SEXHEALTH = "Sexual Health";
     public static final String PSW_SPECIALTY_GENERAL_PRACTICE ="GP";
     public static final String PSW_SPECIALTY_MEDICINE ="Medicine -";
     public static final String PSW_SPECIALTY_OBS ="Obstetrics";
@@ -162,6 +176,7 @@ public final class Strings {
     public static final String PSW_SPECIALTY_PSYCHIATRY ="Psychiatry";
     public static final String PSW_SPECIALTY_PUBLIC_HEALTH ="Public Health";
     public static final String PSW_SPECIALTY_RADIOLOGY ="Radiology";
+    public static final String PSW_SPECIALTY_RHEUMATOLOGY ="Rheumatology";
     public static final String PSW_SPECIALTY_SURGERY ="Surgery -";
     public static final String PSW_TRUST_BOURNEMOUTH = "Bournemouth";
     public static final String PSW_TRUST_DORCHESTER = "Dorchester";
@@ -175,6 +190,27 @@ public final class Strings {
     public static final String PSW_TRUST_JERSEY = "Jersey";
     public static final String PSW_TRUST_SALISBURY = "Salisbury";
     public static final String PSW_TRUST_SOUTHAMPTON = "Southampton";
+    public static final String PSW_TRAINED_UK = "UK";
+    public static final String PSW_ETHNICITY_WHITEB = "White B";
+    public static final String PSW_ETHNICITY_WHITEO = "White O";
+    public static final String PSW_ETHNICITY_ASIAN = "Asian";
+    public static final String PSW_ETHNICITY_AFRICAN = "African";
+    public static final String PSW_RELIGION_CHRISTIAN = "Christian";
+    public static final String PSW_RELIGION_ISLAM = "Islam";
+    public static final String PSW_RELIGION_HINDU = "Hindu";
+    public static final String PSW_RELIGION_ATHEIST = "Atheist";
+    public static final String PSW_RELIGION_SIKH = "Sikh";
+    public static final String PSW_RELIGION_JUDAISM = "Judaism";
+    public static final String PSW_RELIGION_BUDDHIDM = "Buddhism";
+    public static final String PSW_DISABILITY_YES = "Yes";
+    public static final String PSW_DISABILITY_NO = "No";
+    public static final String PSW_SEXOR_HET = "Heterosexual";
+    public static final String PSW_SEXOR_HOMO = "Homosexual";
+    public static final String PSW_SEXOR_BISEX = "Bisexual";
+    public static final String PSW_VAR_PNS = "Prefer not to say";
+    
+    
+    
 
     
     
@@ -204,6 +240,8 @@ public final class Strings {
     public static final String GRAPH_SHEET_8 = "Graph8";
     public static final String GRAPH_SHEET_9 = "Graph9";
     public static final String GRAPH_SHEET_10 = "Graph10";
+    public static final String GRAPH_SHEET_11 = "Graph11";
+    public static final String GRAPH_SHEET_12 = "Graph12";
     public static final String GRAPH_1_TITLE = "Gender disclosed for all Wessex trainees and PSU referrals";
     public static final String GRAPH_2_TITLE = "Referral reason financial year ";
     public static final String GRAPH_3_TITLE = "Health Referrals (Breakdown) ";
@@ -217,16 +255,14 @@ public final class Strings {
     //graph columns and rows
     public static final String GRAPH_COLUMN_REF_COUNT = "Referred count";
     public static final String GRAPH_COLUMN_WSSX_COUNT = "Wessex count";
-    public static final String GRAPH_COLUMN_HEALTH = "Health";
-    public static final String GRAPH_COLUMN_OTHER = "Other incl dyslexia";
-    public static final String GRAPH_COLUMN_CARREER_DIRECT= "Carreer (direct)";
-    public static final String GRAPH_COLUMN_EXAM_FAILURE_DIRECT = "Exam failure (direct)";
+    public static final String GRAPH_COLUMN_OTHER = "Other";
     public static final String GRAPH_COLUMN_MENTAL = "Mental";
     public static final String GRAPH_COLUMN_PHYSICAL = "Physical";
     public static final String GRAPH_COLUMN_BOTH = "Both";
     public static final String GRAPH_COLUMN_TOTAL="Total";
     public static final String GRAPH_COLUMN_SSG="SSG Costs";
     public static final String GRAPH_COLUMN_CM="CM Costs";
+    public static final String GRAPH_ROW_TOTAL = "Total";
     public static final String GRAPH_ROW_F1 = "F1 & F2";
     public static final String GRAPH_ROW_CT1 = "CT1, CT2, ST1 & ST2";
     public static final String GRAPH_ROW_ST3 = "ST3, ST4, ST5 & CT3";
@@ -334,11 +370,13 @@ public final class Strings {
     public static final String TABLE_BW = "T2W";
     public static final String TABLE_BX = "T2X";
     public static final String TABLE_BY = "T2Y";
-    
+    public static final String DOC_Y = "YR";
+    public static final String DOC_YR2 = "YR2";
+    public static final String DOC_YS1 = "YS1";
+    public static final String DOC_YS2 = "YS2";
+    public static final String DOC_YS3 = "YS3";
+    public static final String DOC_YP1 = "YP1";
+    public static final String DOC_TCR = "TCR";
     public static final String LAST_YEAR_SLASH = "lastYearSlash";
-    
-    
-    
-    
     
 }
